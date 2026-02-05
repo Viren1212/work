@@ -34,6 +34,7 @@ function Header() {
       >
         Contact
       </NavLink>
+     
     </nav>
   );
 }

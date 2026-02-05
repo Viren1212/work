@@ -1,8 +1,11 @@
 import React from 'react'
+import PlacementUpdate from './PlacementUpdate'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <PlacementUpdate />
+    </div>
   )
 }
 

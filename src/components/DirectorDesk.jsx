@@ -76,8 +76,8 @@ const DirectorDesk = () => {
               <div className="image-overlay"></div>
             </div>
             <div className="card-info">
-              <h3 className="director-name">Prof. Abhishek saini</h3>
-              <p className="director-designation">Director & Director-Principal</p>
+              <h3 className="director-name">Prof. Anil kumar</h3>
+              <p className="director-designation">Director & Principal</p>
               <p className="director-credentials">
                 Ph.D. (IIT Bombay) | M.Tech | B.E.
               </p>

@@ -4,86 +4,73 @@ import principalPhoto from '../assets/prienciplephoto/prienciple.jpeg';
 
 /**
  * DirectorDesk Component
- * Features message from the Director/Principal
- * Split layout: text on left, image card on right
+ * Split section with director note and profile card
  */
 const DirectorDesk = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const shortMessage = "Welcome to Government Engineering College, where we nurture young minds to become innovative engineers and responsible citizens. Our commitment to academic excellence, combined with state-of-the-art facilities and industry partnerships, ensures that our students are well-prepared for the challenges of tomorrow.";
+  const shortMessage = "Welcome to SIET. We are building a campus where students learn by doing, collaborate across disciplines, and graduate ready for real engineering challenges. Academic depth, ethical thinking, and practical problem-solving are central to everything we teach.";
 
-  const fullMessage = shortMessage + " Over the past three decades, we have consistently maintained our position as one of the premier engineering institutions in the region. Our dedicated faculty members bring both academic expertise and industry experience to the classroom, creating a dynamic learning environment. We emphasize not just theoretical knowledge, but also practical skills, research aptitude, and ethical values. I invite you to explore our programs and join our community of learners and innovators.";
+  const fullMessage = `${shortMessage} Our faculty teams combine research experience with industry exposure so every course connects theory to implementation. We encourage project-based learning, internships, and innovation challenges throughout the year. I invite you to explore our programs and become part of a student community focused on leadership, curiosity, and measurable impact.`;
 
   return (
     <section className="director-desk section" id="about">
       <div className="container">
-        {/* Section Title */}
         <div className="section-header">
           <h2 className="section-title">Director's Desk</h2>
           <div className="title-underline"></div>
         </div>
 
         <div className="director-content">
-          {/* Left: Text Content */}
           <div className="director-message">
-            <h3 className="message-title">
-              Message from the Director
-            </h3>
-            <p className="message-text">
-              {isExpanded ? fullMessage : shortMessage}
-            </p>
-            <button 
+            <h3 className="message-title">A Message from the Director</h3>
+            <p className="message-text">{isExpanded ? fullMessage : shortMessage}</p>
+            <button
               className="read-more-btn"
               onClick={() => setIsExpanded(!isExpanded)}
+              type="button"
             >
               {isExpanded ? 'Read Less' : 'Read More'}
-              <span className="btn-arrow">{isExpanded ? '↑' : '→'}</span>
+              <span className="btn-arrow">{isExpanded ? '<-' : '->'}</span>
             </button>
 
-            {/* Key Highlights */}
             <div className="highlights">
               <div className="highlight-item">
-                <div className="highlight-icon">🎓</div>
+                <div className="highlight-icon" aria-hidden="true">AC</div>
                 <div className="highlight-text">
                   <h4>Academic Excellence</h4>
-                  <p>NAAC A++ Accredited</p>
+                  <p>Strong outcome-based curriculum</p>
                 </div>
               </div>
               <div className="highlight-item">
-                <div className="highlight-icon">🔬</div>
+                <div className="highlight-icon" aria-hidden="true">RS</div>
                 <div className="highlight-text">
                   <h4>Research Focus</h4>
-                  <p>100+ Research Papers Published</p>
+                  <p>Innovation labs and guided projects</p>
                 </div>
               </div>
               <div className="highlight-item">
-                <div className="highlight-icon">🏆</div>
+                <div className="highlight-icon" aria-hidden="true">IN</div>
                 <div className="highlight-text">
                   <h4>Industry Connect</h4>
-                  <p>150+ Corporate Partners</p>
+                  <p>Mentorship and placement readiness</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: Director Image Card */}
           <div className="director-card">
             <div className="card-image">
-              <img 
-                src={principalPhoto}
-                alt="Director" 
-              />
+              <img src={principalPhoto} alt="Director" />
               <div className="image-overlay"></div>
             </div>
             <div className="card-info">
-              <h3 className="director-name">Prof. Anil kumar</h3>
+              <h3 className="director-name">Prof. Anil Kumar</h3>
               <p className="director-designation">Director & Principal</p>
-              <p className="director-credentials">
-                Ph.D. (IIT Bombay) | M.Tech | B.E.
-              </p>
+              <p className="director-credentials">PhD (IIT Bombay) | M.Tech | B.E.</p>
               <div className="director-contact">
-                <p>📧 sietpkl@email.com</p>
-                <p>📞 +91-XXX-XXXXXXX</p>
+                <p>Email: director@siet.edu.in</p>
+                <p>Phone: +91-XXX-XXXXXXX</p>
               </div>
             </div>
           </div>
